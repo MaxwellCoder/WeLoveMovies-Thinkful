@@ -17,12 +17,14 @@ async function validateMovieId(req, res, next) {
 		res.locals.movie = movie;
 		return next();
 	}
-
 	next({
 		status: 404,
 		message: "Movie cannot be found."
 	});
 }
+
+
+
 
 module.exports = {
 	list,
